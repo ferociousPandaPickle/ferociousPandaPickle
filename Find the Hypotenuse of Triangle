@@ -1,0 +1,24 @@
+//Find the Hypotenuse of Triangle
+import java.util.Scanner;
+// Always Import this when using Scanner
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		double x;
+		double y;
+		double z;
+		// Asks User Input for Sides x and y
+		System.out.println("What is the length of side x : ");
+		x = scanner.nextDouble();
+		System.out.println("What is the length os side y : ");
+		y = scanner.nextDouble();
+		
+		// Uses 2 Math Functions to find Hypotenuse
+		System.out.println("The Hypotenuse is : ");
+		z = Math.sqrt(Math.pow(x,2) + Math.pow(y, 2));
+		
+		System.out.println(z);
+		
+	}
+}
