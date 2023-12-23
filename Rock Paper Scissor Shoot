@@ -4,7 +4,10 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Main{	
-	public static void continueGame() {
+
+	public static void wholeGame() {
+		String win = "You Win";
+		String lose = "You Lose";
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Rock..Papers...Scissors...Shoot ");
@@ -16,31 +19,32 @@ public class Main{
 		int aiInput = random.nextInt(3) + 1;
 		
 		System.out.println(aiInput);
-	}
-	public static void scorePart(int x, int y) {
-		String win = "You Win";
-		String lose = "You Lose";
 		
-		if(y != x) {
-			if((y == 1)&&(x == 2)) {
+		while(userInput == aiInput) {
+			System.out.println("Draw");
+			}
+		
+		if(userInput != aiInput) {
+			if((userInput == 1)&&(aiInput == 2)) {
 				System.out.println(lose);
 			}
-			if((y == 2)&&(x == 3)) {
+			if((userInput == 2)&&(aiInput == 3)) {
 				System.out.println(lose);
 			}
-			if((y == 3)&&(x == 1)) {
+			if((userInput == 3)&&(aiInput == 1)) {
 				System.out.println(lose);
 			}
-			if((y == 2)&&(x == 1)) {
+			if((userInput == 2)&&(aiInput == 1)) {
 				System.out.println(win);
 			}
-			if((y == 3)&&(x == 2)) {
+			if((userInput == 3)&&(aiInput == 2)) {
 				System.out.println(win);
 			}
-			if((y == 1)&&(x == 3)) {
+			if((userInput == 1)&&(aiInput == 3)) {
 				System.out.println(win);
 			}
 		}
+		
 		
 	}
 	
@@ -62,25 +66,6 @@ public class Main{
 		System.out.println("2 is Paper");
 		System.out.println("3 is Scissor");
 		
-		System.out.println("Rock..Paper...Scissor...Shoot ");
-		
-		int userInput = scanner.nextInt();
-
-		Random random = new Random();
-		
-		int aiInput = random.nextInt(3) + 1;
-		
-		System.out.println(aiInput);
-		
-		int x = userInput;
-		int y = aiInput;
-		
-		while(userInput == aiInput) {
-			System.out.println("Draw");
-			
-			continueGame();
-			scorePart(x,y);
-			
-		}
+		wholeGame();
 	}
 }
