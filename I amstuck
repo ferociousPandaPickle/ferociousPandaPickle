@@ -1,0 +1,86 @@
+//Rock Paper Scissors
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main{	
+	public static void continueGame() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Rock..Papers...Scissors...Shoot ");
+		
+		int userInput = scanner.nextInt();
+
+		Random random = new Random();
+		
+		int aiInput = random.nextInt(3) + 1;
+		
+		System.out.println(aiInput);
+	}
+	public static void scorePart(int x, int y) {
+		String win = "You Win";
+		String lose = "You Lose";
+		
+		if(y != x) {
+			if((y == 1)&&(x == 2)) {
+				System.out.println(lose);
+			}
+			if((y == 2)&&(x == 3)) {
+				System.out.println(lose);
+			}
+			if((y == 3)&&(x == 1)) {
+				System.out.println(lose);
+			}
+			if((y == 2)&&(x == 1)) {
+				System.out.println(win);
+			}
+			if((y == 3)&&(x == 2)) {
+				System.out.println(win);
+			}
+			if((y == 1)&&(x == 3)) {
+				System.out.println(win);
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Press any letter to start: ");
+		
+		String startGame = scanner.nextLine();
+		
+		System.out.println("");
+		
+		System.out.println("RULES");
+		System.out.println("---------------");
+		
+		
+		System.out.println("1 is Rock");
+		System.out.println("2 is Paper");
+		System.out.println("3 is Scissor");
+		
+		System.out.println("Rock..Paper...Scissor...Shoot ");
+		
+		int userInput = scanner.nextInt();
+
+		Random random = new Random();
+		
+		int aiInput = random.nextInt(3) + 1;
+		
+		System.out.println(aiInput);
+		
+		int x = userInput;
+		int y = aiInput;
+		
+		while(userInput == aiInput) {
+			System.out.println("Draw");
+			
+			continueGame();
+			scorePart(x,y);
+			
+		}
+	}
+}
