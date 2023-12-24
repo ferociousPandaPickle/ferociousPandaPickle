@@ -1,0 +1,44 @@
+//Create a Random Number Guessing Game
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[] args) {
+		//Welcome them to the Number Guessing Game
+		//AI picks a random number
+		//You pick a number
+		// You get either far or close
+		//When you don't get it right it will repeat again and tally up how many tries it took you
+		
+		System.out.println("Welcome to the Number Guessing Game :) ");
+		System.out.println("The system will generate a random number from 1-10 and you have to guess it");
+		System.out.println("Simple right? :)");
+		System.out.println("Alright then get to it :)");
+		
+		Random random = new Random();
+		
+		int systemPick = random.nextInt(10)+1;
+		
+		System.out.println("The system has selected a random number");
+		System.out.println("Make your move :)");
+		
+		Scanner scanner = new Scanner(System.in);
+		int userChoice = 0;
+		
+		while(userChoice != systemPick) {
+			userChoice = scanner.nextInt();
+			if (userChoice > systemPick) {
+				System.out.println("The number is lesser than your choice");
+			}
+			if (userChoice < systemPick) {
+				System.out.println("The number is greater than your choice");
+			}
+		}
+		
+		
+		if (userChoice == systemPick) {
+			System.out.println("Congrats You Win :)");
+		}
+	}
+}
