@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 Computer Science Student at Arizona State University (ASU)<br>🌱 I’m interested in AI/ML/Cybersecurity/Full-Stack/Game Development<br>⚡Currently Working on Webpage
+🔭 Computer Science Student at Arizona State University (ASU)<br>🌱 I’m interested in AI/ML/Cybersecurity/Full-Stack Developement/Game Development<br>⚡Currently Working on Webpage
 
 
 # 💻 Tech Stack:
